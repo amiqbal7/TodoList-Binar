@@ -65,8 +65,8 @@ const App = () => {
   };
 
   return (
-    <div className="m-16">
-      <div className="container grid justify-items-center mx-auto px-5 bg-sky-500 max-w-4xl shadow-xl">
+    <div className="m-3 sm:m-16">
+      <div className="container grid justify-items-center mx-auto px-5 bg-sky-500 max-w-md shadow-xl">
         <div className="text-center py-10 border-emerald-400">
           <h1 className="font-bold text-3xl text-white">My TodoList :</h1>
         </div>
@@ -79,7 +79,7 @@ const App = () => {
                   onChange={(e) => setInput(e.target.value)}
                   type="text"
                   placeholder="Create your todo"
-                  className="pb-1 rounded-l-md border-blue-700 pl-2 border-4 text-xl"
+                  className="pb-1 w-48 md:w-64 rounded-l-md border-blue-700 pl-2 border-4 text-xl"
                   value={input}
                 />
                 <button
@@ -92,13 +92,10 @@ const App = () => {
             </form>
             {/* input search bar */}
             <div className="mt-3">
-              <h1 className="text-white font-semibold text-center">
-                Todo Search
-              </h1>
               <input
                 type="text"
-                placeholder="Search"
-                className="px-2 py-1 w-full rounded-md border-blue-700 border-2 text-lg"
+                placeholder="Search Todo"
+                className="px-2 py-1 w-full rounded-md border-blue-700 border-4 text-lg"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
@@ -145,7 +142,7 @@ const App = () => {
           </div>
         ))}
         {/* button done all dan remove all */}
-        <div className="flex gap-2 font-bold ">
+        <div className="flex gap-2 font-semibold ">
           <button className=" py-1 mb-4 px-3" onClick={handleComplatedAll}>
             Done all tasks
           </button>
