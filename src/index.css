@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  button {
+    @apply text-white border bg-blue-700 border-blue-700
+        hover:bg-transparent hover:text-blue-700 rounded-sm;
+  }
+}
+
